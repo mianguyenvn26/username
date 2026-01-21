@@ -1,13 +1,15 @@
 # README for Username Validation Script
 
 ## Author Information
-- **Name:** [Your Full Name]
-- **Course:** [Course Number and Name]
+- **Name:** Mia Nguyen
+- **Course:** CPSC 298-01
 - **Assignment:** Username Validation
-- **Date:** [Date of Completion]
+- **Date:** 1/20
 
 ## Program Description
 [Write 2-3 sentences in your own words describing what this script does and its purpose. Explain the problem it solves and how it works at a high level.]
+this script validates usernames, avoiding reference problems.
+my program use the if statement to validate username input
 
 ## Username Requirements
 This script validates usernames according to the following rules:
@@ -28,10 +30,9 @@ To test with the provided input file:
 
 ## How the Script Works
 [Explain in 3-5 sentences how your script validates usernames. Include information about:]
-- The use of the `while` loop
-- The `grep` command with extended regular expressions
-- The meaning of the `-E` and `-v` flags
-- The redirect `> /dev/null 2>&1`
+- I use if - else statements to validate if all characters in the username string are member of the alphabet and/or contain the underscore 
+- echo -e is used so that the shell interpreter intepret /n as adding a new line
+- while loop is used to continuously prompt user for a name until it's valid (and break out of the while loop)
 
 ## Regular Expression Pattern
 The validation uses the following regular expression pattern:
@@ -46,14 +47,23 @@ This pattern ensures that:
 ## Testing Results
 [Describe your testing process and results. Include:]
 - Example valid usernames you tested (at least two)
+1.
+mianguyenvn26
+2. hsid_1 
 - Example invalid usernames and why they fail (at least two)
+1. bbno$ --> containing $
+2. hwufew* --> containing *
 - How you used the username-input file to test
+by running the command
+./username.sh < username-input
 
 ## Challenges and Solutions
 [Optional: Describe any challenges you encountered while creating this script and how you solved them. This could include debugging issues, understanding regular expressions, or Git workflow problems.]
+I got everything, until I had to push the file back to my main. i used this command "git push -f origin main" and input my username, mianguyenvn26, and password, but it kept telling me i input the wrong password. so i'm stuck.
 
 ## Resources
 [List any resources you used (class slides, ChatGPT, etc.). Please refer to the course syllabus for more details on citations.]
+lecture videos and my friend from Case Western Reserved helped me fork and modify.
 
 ## License
 This project is part of coursework for Chapman University and is intended for educational purposes.
